@@ -2,7 +2,6 @@
 
 
 <!-- PROJECT SHIELDS -->
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 
@@ -10,7 +9,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/a-bianchi/kafka">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
 
@@ -144,6 +143,5 @@ Project Link: [https://github.com/a-bianchi/kafka](https://github.com/a-bianchi/
 
 <!-- MARKDOWN LINKS & IMAGES -->
 [license-url]: https://github.com/a-bianchi/kafka/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/alejobianchi
 [product-screenshot]: images/screenshot.png
