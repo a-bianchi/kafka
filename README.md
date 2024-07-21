@@ -39,7 +39,7 @@
     </li>
     <li><a href="https://github.com/a-bianchi/kafka/blob/master/WHAT_IS_KAFKA_EN.md">What is apache Kafka?</a></li>
 	<li><a href="https://github.com/a-bianchi/kafka/blob/master/WHAT_IS_KAFKA_ES.md">Que es apache Kafka?</a></li>
-  <li><a href="https://github.com/a-bianchi/kafka/blob/kafka-twitter-nestjs">Example with nestjs</a></li>
+  <li><a href="https://github.com/a-bianchi/kafka/tree/master/implementation-example/kafka-twitter-nestjs">Example with Nestjs</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
