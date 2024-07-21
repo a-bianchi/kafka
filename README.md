@@ -5,7 +5,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/a-bianchi/kafka">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="images/logo.png" alt="Logo" width="150" height="80">
   </a>
 
   <h3 align="center">Apache Kafka Summary</h3>
