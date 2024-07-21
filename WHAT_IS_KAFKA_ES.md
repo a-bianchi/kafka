@@ -262,3 +262,145 @@ Pasos transacciones
 ### 7. Cerrar el Productor
 
 **Paso:** Cerrar el productor con `close`.
+
+## Schema Registry
+
+- Componente open source desarrollado por Confluent
+- Permite registrar esquemas de datos
+- Repositorio centralizado
+- Formato AVRO o JSON
+- Asegura que los datos se insertan con un esquema concreto
+- API REST
+- Histórico y versiones de esquemas
+- Serializadores de datos
+- Interfaz de usuario
+
+![schema-registry.png](https://github.com/a-bianchi/kafka/blob/master/images/schema-registry.png)
+
+## Kafka Connect
+
+- Framework para Apache Kafka
+- Proporciona la capacidad de conectar Kafka con sistemas externos
+- Modelos push y pull
+- API para desarrollar productores y consumidores
+- API principales
+    - Productor
+    - Consumidor
+    - Kafka Streams / KSQL
+    - Kafka Connect Source
+    - Kafka Connect Sink
+
+![kafka-apis.png](https://github.com/a-bianchi/kafka/blob/master/images/kafka-apis.png)
+
+## Ventajas de Kafka Connect
+
+- Simplifican la implementación
+- Resuelven problemas como
+    - Gestión de offsets
+    - Recuperación de errores
+    - Distribución de carga
+
+## Kafka Streams
+
+- API para Apache Kafka
+- Permite crear aplicaciones de procesamiento en streaming
+- Consume uno o más topics
+- Genera salida en topics
+- Puede conectarse a sistemas externos
+
+## Stream Processing
+
+- Procesar los datos de manera continua y secuencial
+- Usa flujos de datos infinitos y sin límite de tiempo
+- Batches (Lotes) → Manera tradicional
+- Servicios de tiempo real
+- Latencias en tiempo real y stream processing
+    - 10ms - 1s
+- Debemos considerar
+    - Cantidad de datos a procesar de forma simultánea
+    - Latencias end to end
+    - Garantías de entrega
+- Casos de uso
+    - Monitorización de sistemas, redes o aplicaciones
+    - IoT
+    - Sistemas de recomendación
+    - Optimización de procesos
+    - Notificaciones en tiempo real
+- Conceptos Clave
+    - Tupla: conjunto de elementos almacenados de forma consecutiva
+    - Flujos de datos: secuencia infinita de tuplas
+    - Ventanas de procesamiento
+        - Dividen los datos de entrada en partes finitas
+        - Permiten tratar los flujos de datos con recursos limitados
+        - Basadas en tiempo o número de elementos
+- Operaciones sin estado:
+    - Un resultado por cada elemento
+- Operaciones con estado:
+    - Operan sobre conjunto de elementos
+- Checkpointing
+    - Almacenamiento persistente del estado
+
+## Ventajas de Kafka Streams
+
+- No necesita un cluster dedicado (usa Kafka)
+- Reprocesamiento sencillo de mensajes
+- Desacoplamiento de aplicaciones, muy usado en microservicios
+- Procesamiento de eventos individuales, streams nativos
+- Garantías de entrega exactly-once
+
+## Desventajas
+
+- Acoplado con Apache Kafka
+- Sin mucha adopción para cargas de trabajo pesadas
+
+## Casos de uso
+
+- Sistema de procesamiento escalables en tiempo real
+- Infraestructura híbrida y cloud: Habilita movimiento de datos
+- Plataforma central: Middleware
+- Integración de sistemas y movimiento de datos
+- Monitorización y alertas en tiempo real
+
+## KSQL
+
+- API para Kafka open source desarrollado por Confluent
+- Proporciona interfaz SQL
+- Operaciones de filtrado, transformación y agregación
+- Abstracción sobre la API de Kafka Streams
+- Bajas latencias (ms)
+    - KStream: Secuencia de datos estructurados
+        - Eventos son inmutables
+    - KTable: Situación concreta del stream
+        - Mutable
+    
+![joins.png](https://github.com/a-bianchi/kafka/blob/master/images/joins.png)
+
+## Ventajas y Desventajas de KSQL
+
+- Reduce complejidad de Kafka Streams
+- Uso de SQL como lenguaje
+- Para transformaciones más complejas seguir usando
+    - Kafka Streams
+
+## Arquitectura y operaciones
+
+## Mirroring
+
+- Copia de datos entre clusters independientes
+- Es posible realizar copias parciales
+    - Redundancia de datos
+    - Migraciones de datos
+    - Entre clusters centrales y regionales
+- MirrorMaker
+
+## Hub and Spokes
+
+![hub-and-spokes.png](schema-registry.png](https://github.com/a-bianchi/kafka/blob/master/images/hub-and-spokes.png)
+
+## Activo-Activo
+
+![activo-activo.png](https://github.com/a-bianchi/kafka/blob/master/images/activo-activo.png)
+
+## Activo-Pasivo
+
+![activo-pasivo.png](https://github.com/a-bianchi/kafka/blob/master/images/activo-pasivo.png)

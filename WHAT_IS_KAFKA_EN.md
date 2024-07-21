@@ -262,3 +262,145 @@ When a duplicate message is received for the same producer ID and sequence numbe
 ### 7. Close the Producer
 
 **Step:** Close the producer with `close`.
+
+## Schema Registry
+
+- Open-source component developed by Confluent
+- Allows registering data schemas
+- Centralized repository
+- AVRO or JSON format
+- Ensures data is inserted with a specific schema
+- REST API
+- Schema history and versions
+- Data serializers
+- User interface
+
+![schema-registry.png](https://github.com/a-bianchi/kafka/blob/master/images/schema-registry.png)
+
+## Kafka Connect
+
+- Framework for Apache Kafka
+- Provides the ability to connect Kafka with external systems
+- Push and pull models
+- API for developing producers and consumers
+- Main APIs:
+    - Producer
+    - Consumer
+    - Kafka Streams / KSQL
+    - Kafka Connect Source
+    - Kafka Connect Sink
+
+![kafka-apis.png](https://github.com/a-bianchi/kafka/blob/master/images/kafka-apis.png)
+
+## Advantages of Kafka Connect
+
+- Simplify implementation
+- Solve problems such as:
+    - Offset management
+    - Error recovery
+    - Load distribution
+
+## Kafka Streams
+
+- API for Apache Kafka
+- Allows creating streaming processing applications
+- Consumes one or more topics
+- Generates output in topics
+- Can connect to external systems
+
+## Stream Processing
+
+- Continuously and sequentially process data
+- Uses infinite data flows with no time limit
+- Batches (Traditional way)
+- Real-time services
+- Real-time latencies and stream processing:
+    - 10ms - 1s
+- Considerations:
+    - Amount of data to be processed simultaneously
+    - End-to-end latencies
+    - Delivery guarantees
+- Use cases:
+    - Monitoring systems, networks, or applications
+    - IoT
+    - Recommendation systems
+    - Process optimization
+    - Real-time notifications
+- Key Concepts:
+    - Tuple: a set of consecutively stored elements
+    - Data streams: an infinite sequence of tuples
+    - Processing windows:
+        - Divide input data into finite parts
+        - Allow treating data streams with limited resources
+        - Based on time or number of elements
+- Stateless operations:
+    - One result per element
+- Stateful operations:
+    - Operate on a set of elements
+- Checkpointing:
+    - Persistent state storage
+
+## Advantages of Kafka Streams
+
+- Does not require a dedicated cluster (uses Kafka)
+- Easy message reprocessing
+- Application decoupling, widely used in microservices
+- Processing individual events, native streams
+- Exactly-once delivery guarantees
+
+## Disadvantages
+
+- Tied to Apache Kafka
+- Not widely adopted for heavy workloads
+
+## Use Cases
+
+- Scalable real-time processing systems
+- Hybrid and cloud infrastructure: Enables data movement
+- Central platform: Middleware
+- System integration and data movement
+- Real-time monitoring and alerts
+
+## KSQL
+
+- Open-source API for Kafka developed by Confluent
+- Provides a SQL interface
+- Filtering, transformation, and aggregation operations
+- Abstraction over the Kafka Streams API
+- Low latencies (ms)
+    - KStream: Sequence of structured data
+        - Events are immutable
+    - KTable: Concrete situation of the stream
+        - Mutable
+    
+![joins.png](https://github.com/a-bianchi/kafka/blob/master/images/joins.png)
+
+## Advantages and Disadvantages of KSQL
+
+- Reduces complexity of Kafka Streams
+- Uses SQL as a language
+- For more complex transformations, continue using:
+    - Kafka Streams
+
+## Architecture and Operations
+
+## Mirroring
+
+- Data copying between independent clusters
+- Partial copies are possible
+    - Data redundancy
+    - Data migrations
+    - Between central and regional clusters
+- MirrorMaker
+
+## Hub and Spokes
+
+![hub-and-spokes.png](https://github.com/a-bianchi/kafka/blob/master/images/hub-and-spokes.png)
+
+## Active-Active
+
+![activo-activo.png](https://github.com/a-bianchi/kafka/blob/master/images/activo-activo.png)
+
+## Active-Passive
+
+![activo-pasivo.png](https://github.com/a-bianchi/kafka/blob/master/images/activo-pasivo.png)

@@ -18,7 +18,7 @@
   <p align="center">
     This repository is dedicated to providing comprehensive information about Apache Kafka, including its core concepts, configuration, and best practices for personal study.
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/a-bianchi/kafka"><strong>Explore the docs »</strong></a>
     <br />
   </p>
 </div>
